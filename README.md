@@ -10,3 +10,5 @@ This is an application intended for the Philadelphia Fire Department to conduct 
 - The map resets to the original position, opacities and blank colour when pressing reset. Positions and labels on the respective sliders are also pushed back to the original position.
 - Tooltips over both the engines and the hydrants to show individual information.
 - Links for report available on the website.
+
+![image](https://raw.githubusercontent.com/liziqun/Hydrant_Inspector/master/app.png)
