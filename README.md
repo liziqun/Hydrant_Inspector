@@ -1,6 +1,6 @@
 # Hydrant_Inspector
 
-https://liziqun.github.io/Hydrant_Inspector/
+The App Link:  https://liziqun.github.io/Hydrant_Inspector/
 
 This is an application intended for the Philadelphia Fire Department to conduct their hydrant inspections. The prioritization scores were generated using machine learning methods (to predict fire risk) and normalized summations of other scores. This project was done as part of the University of Pennsylvania MUSA 800 course and the application was also submitted for the MUSA 611 final project.
 
