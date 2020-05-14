@@ -117,8 +117,8 @@ map.on('load', function() {
     'source': 'engines',
     'layout': {},
     'paint': {
-      'line-color': 'WHITE',
-      'line-width': 1.2
+      'line-color': '#999999',
+      'line-width': 0.5
     }
   });
 
@@ -285,7 +285,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
   layers_2.appendChild(link);
 }
 
-/* ============= Show the filter by scores slier ============== */
+/* ============= Show the filter by scores slider ============== */
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;

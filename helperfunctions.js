@@ -162,8 +162,8 @@ var updateMap = function(combination, opacity_val){
                     '#ccc' //for other that may not be specified
                   ],
                  "circle-radius": 3,
-                 "circle-stroke-width": 0.1,
-                 "circle-stroke-color": "black"
+                 "circle-stroke-width": 0.2,
+                 "circle-stroke-color": "white"
                 }
     });
 
@@ -175,6 +175,7 @@ var updateMap = function(combination, opacity_val){
 var resetColours = function(){
   // if the hydrants are plotted, remove them
   if (map.getLayer('hydrants')){ map.removeLayer('hydrants')};
+  /*
   map.addLayer({
               "id":"hydrants",
               "type":"circle",
@@ -184,12 +185,51 @@ var resetColours = function(){
                 'visibility': 'visible'},
               paint: {
                // color circles by year_built_copy, using a match expression
-               "circle-color":"#7ebdb4",
+               "circle-color":"#CC3333",
                "circle-radius": 3,
-               "circle-stroke-width": 0.1,
+               "circle-stroke-width": 0.2,
                "circle-stroke-color": "white",
                "circle-opacity":1
               }
+  });*/
+  map.addLayer({
+                "id":"engines",
+                "type":"fill",
+                'source': 'engines',
+                'layout': {
+                  'visibility': 'visible'},
+                paint: {
+                   'fill-color': [
+                    'match',
+                    ['get', "fireRisk"],
+                    1,
+                    '#ffffcc',
+                    2,
+                    '#ffeda0',
+                    3,
+                    '#fed976',
+                    4,
+                    '#feb24c',
+                    5,
+                    '#fd8d3c',
+                    6,
+                    '#fc4e2a',
+                    7,
+                    '#e31a1c',
+                    8,
+                    '#bd0026',
+                    9,
+                    '#800026',
+                    10,
+                    '#420D09',
+                    '#ccc' //for other that may not be specified
+                  ]
+
+                   ,
+                   'fill-outline-color': 'white',
+                   'fill-opacity':0.7
+                  }
+               //,'filter': ['==', '$type', 'Polygon']
   });
 
 };
@@ -214,8 +254,8 @@ var resetValues = function(){
 
   // recenter the map
   map.flyTo({
-    center:[-75.150312,40.000836],
-    zoom: 10,
+    center:[-75.09312,40.000836],
+    zoom: 10.2,
     essential: true // this animation is considered essential with respect to prefers-reduced-motion
   });
 };
