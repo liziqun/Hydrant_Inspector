@@ -283,6 +283,6 @@ var buttonClick = function(){
 }
 
 /* ============= Executing these functions ============== */
-$(document).ready(function() {
-  buttonClick();
-});
+  $(document).ready(function(){
+    buttonClick();
+  });
