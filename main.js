@@ -11,14 +11,14 @@ map = new mapboxgl.Map({
 
 /* ============= DATA SET UP ============== */
 var hydrants;
-$.ajax('https://raw.githubusercontent.com/njxinran95/PhillyFire_App/master/deciles_by_ENGINE_4326.geojson')
+$.ajax('https://raw.githubusercontent.com/liziqun/Hydrant_Inspector/master/deciles_by_ENGINE_4326.geojson')
   .done(function(response) {
     hydrants= JSON.parse(response);
     console.log(hydrants);
   });
 
 var engines;
-  $.ajax('https://raw.githubusercontent.com/njxinran95/PhillyFire_App/master/engines_4326.geojson')
+  $.ajax('https://raw.githubusercontent.com/liziqun/Hydrant_Inspector/master/engines_4326.geojson')
     .done(function(response) {
       engines = JSON.parse(response);
       console.log(engines);
